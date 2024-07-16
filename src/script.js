@@ -1,4 +1,12 @@
-const tmdbKey = < add-personal-api-key-as-string />;
+import {
+  populateGenreDropdown,
+  getRandomMovie,
+  getSelectedGenre,
+  clearCurrentMovie,
+  displayMovie,
+} from "./helpers";
+
+const tmdbKey = import.meta.env.VITE_API_KEY;
 const tmdbBaseUrl = "https://api.themoviedb.org/3";
 const playBtn = document.getElementById("playBtn");
 
@@ -56,7 +64,7 @@ const getMovieInfo = async (movie) => {
 };
 
 // Gets a list of movies and ultimately displays the info of a random movie from the list
-const showRandomMovie = async () => {
+export const showRandomMovie = async () => {
   const movieInfo = document.getElementById("movieInfo");
   if (movieInfo.childNodes.length > 0) {
     clearCurrentMovie();
@@ -64,9 +72,8 @@ const showRandomMovie = async () => {
   const movies = await getMovies();
   const randomMovie = await getRandomMovie(movies);
   const info = await getMovieInfo(randomMovie);
-  
+
   displayMovie(info);
-  
 };
 
 getGenres().then(populateGenreDropdown);

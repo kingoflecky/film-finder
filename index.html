@@ -9,15 +9,16 @@
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&family=Fredoka+One&family=Questrial&family=Staatliches&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="public/style.css" />
+
     <script
       defer
       src="https://kit.fontawesome.com/e918d10e90.js"
       crossorigin="anonymous"
     ></script>
   </head>
-  <script defer type = "text/javascript" src = "public/helpers.js"></script>
-  <script defer type = "text/javascript" src = "public/script.js"></script>
+
+  <script type="module" src="/src/main.js"></script>
+
   <body>
     <header>
       <h1 id="appTitle">🍿Film Finder🍿</h1>
@@ -26,7 +27,7 @@
       <label htmlFor="genres">Choose a genre:</label>
       <select name="genres" id="genres"></select>
     </form>
-    <button id="playBtn">Let's Play!</button>
+    <button id="playBtn">Suggest A Film!</button>
     <div id="movieInfo">
       <div id="moviePoster"></div>
       <div id="movieText"></div>

@@ -1,5 +1,5 @@
 body {
-    background-color: #7f0920;
+    background-color: #a60329a3;
     color: #0a0408;
 }
 
@@ -13,6 +13,7 @@ body {
 
 #genreForm, #playBtn {
     text-align: center;
+    margin: 1em;
     margin: 0px auto;
     display: block;
     font-family: 'Fredoka One', sans-serif;
@@ -21,6 +22,7 @@ body {
 #movieInfo {
     width:  65%;
     margin:  32px auto;
+    max-height: 650px;
 }
 
 #movieInfo:after {
@@ -34,21 +36,33 @@ body {
     float:  left;
 }
 
+#moviePoster{
+    max-height: inherit;
+}
+
 img#moviePoster {
     width:  100%;
     height:  auto;
     display:  block;
     margin:  auto;
+    max-height: inherit;
 }
 
 #movieText {
     font-family: 'Questrial';
     color: #FEFBEA;
     line-height: 1.25;
+    font-size: x-large;
 }
 
-#movieTitle, #movieOverview {
-    padding:  32px;
+#movieTitle {
+    padding:  0.5em;
+    width: 7em;
+}
+
+#movieOverview {
+    padding:  1em;
+    width: 15em
 }
 
 #playBtn {
@@ -57,20 +71,23 @@ img#moviePoster {
     padding: 7px 10px;
     border-radius: 10px;
     border-style: none;
-    background-color: #B97828;
-    color: #fdc238;
+    background-color: #f98900;
+    color: #ffe600;
     cursor:  pointer;
 }
 
 label {
     display: block;
     font-size: 35px;
-    margin-bottom: 5px;
+    margin: 0.5em;
 }
 
 select {
-    width: 200px;
+    width: 15em;
     height: auto;
+    margin: 1em;
+    padding: 0.75em;
+    font-weight: bold;
 }
 
 #likeOrDislikeBtns {
@@ -84,14 +101,15 @@ select {
     border-radius: 12px;
     border-style: none;
     cursor:  pointer;
+    margin: .5em;
 }
 
 #likeBtn {
-    background-color: #249e57;
+    background-color: #22ba61;
     color: darkgreen;
 }
 
 #dislikeBtn {
-    background-color: #c74a4a;
+    background-color: #e21818;
     color: #910000;
 }
